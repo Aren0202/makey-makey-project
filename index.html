@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Makey Makey Firebase Video</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      height: 100%;
+      overflow: hidden;
+    }
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="video1">
+    <source src="video1.mp4" type="video/mp4">
+  </video>
+
+  <video id="video2">
+    <source src="video2.mp4" type="video/mp4">
+  </video>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <!-- Jouw Firebase-config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDLn5nyaf3VZkpousQVYGVQqUWMzehxuuw",
+      authDomain: "storytelling-groningen.firebaseapp.com",
+      databaseURL: "https://storytelling-groningen-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "storytelling-groningen",
+      storageBucket: "storytelling-groningen.firebasestorage.app",
+      messagingSenderId: "749995594991",
+      appId: "1:749995594991:web:9442c0ef7ab54ceba6f71a",
+      measurementId: "G-VSWHMVFLR9"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
